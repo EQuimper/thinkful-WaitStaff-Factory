@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body layout="column" ng-controller="DetailsCtrl">
+<body layout="column" layout-xs="column" ng-controller="DetailsCtrl">
 <h1 flex="5" class="title">Wait Staff Calculator</h1>
-<section id="main" class="container" layout="row" flex>
+<section id="main" class="container" layout="row" layout-xs="column" flex flex-order-xs="1">
     <div flex="50" id="details" md-whiteframe="10">
         <h2>Enter the Meal Details</h2>
         <hr>
@@ -35,9 +35,9 @@
         </form>
     </div>
     <!--Right Container-->
-    <div class="container" layout="column" flex="40" flex-offset="10">
+    <div class="container" layout="column" flex="40" flex-offset="10" flex-order-xs="2">
         <!--Customer Charges-->
-        <div id="custCharges" flex="50" md-whiteframe="10">
+        <div id="custCharges" flex="50" md-whiteframe="10" flex-order-xs="3">
             <h5>Customer Charges</h5>
             <hr>
             <md-content class="custChargesContent">
@@ -49,7 +49,7 @@
         </div>
         <br>
         <!--Earnings Info-->
-        <div id="earnings" flex="50" md-whiteframe="10">
+        <div id="earnings" flex="50" md-whiteframe="10" flex-order-xs="4">
             <h5>My Earnings Info</h5>
             <hr>
             <md-content class="earningsContent">
@@ -61,8 +61,8 @@
         </div>
     </div>
 </section>
-<div class="container" layout="row">
-    <md-button ng-click="reset()" type="reset" flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
+<div class="container" layout="row" layout-xs="column" flex-order-xs="5">
+    <md-button ng-click="reset()" type="reset"  flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
 </div>
 
 

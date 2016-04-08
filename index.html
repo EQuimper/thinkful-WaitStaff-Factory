@@ -17,49 +17,52 @@
         <form ng-submit="submit()" name="mealDetails">
             <md-input-container class="marTop">
                 <label>Base Meal Price: $</label>
-                <input type="number" ng-model="baseMeal">
+                <input type="number" ng-model="data.baseMeal" required>
             </md-input-container>
             <br>
             <md-input-container class="marTop">
                 <label>Tax Rate: %</label>
-                <input type="number" ng-model="taxRate">
+                <input type="number" ng-model="data.taxRate" min='0' max='100' step="any" required>
             </md-input-container>
             <br>
             <md-input-container class="marTop">
                 <label>Tip Percentage: %</label>
-                <input type="number" ng-model="tipPerc">
+                <input type="number" ng-model="data.tipPerc" step="any" min='0' max='100' required>
             </md-input-container>
             <br>
-            <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+            <md-button ng-disabled="mealDetails.$invalid" type="submit" class="md-raised md-primary">Submit</md-button>
             <md-button type="reset" class="md-raised md-warn">Cancel</md-button>
         </form>
     </div>
+    <!--Right Container-->
     <div class="container" layout="column" flex="40" flex-offset="10">
+        <!--Customer Charges-->
         <div id="custCharges" flex="50" md-whiteframe="10">
             <h5>Customer Charges</h5>
             <hr>
             <md-content class="custChargesContent">
-                <h6><em>SubToTal:</em> {{getSubTotal(baseMeal, taxRate) | currency}}</h6>
-                <h6><em>Tip:</em> {{getTip(baseMeal, tipPerc) | currency}}</h6>
+                <h6 ng-init="data.subTotal = 0"><em>SubToTal:</em> {{ data.subTotal | currency }}</h6>
+                <h6 ng-init="data.tipCalc = 0"><em>Tip:</em> {{ data.tipCalc | currency }}</h6>
                 <hr class="tip">
-                <h6>Total: {{getTotal(getSubTotal(baseMeal, taxRate), getTip(baseMeal, tipPerc)) | currency}}</h6>
+                <h6 ng-init="data.totalCalc = 0">Total: {{ data.totalCalc | currency}}</h6>
             </md-content>
         </div>
         <br>
+        <!--Earnings Info-->
         <div id="earnings" flex="50" md-whiteframe="10">
             <h5>My Earnings Info</h5>
             <hr>
             <md-content class="earningsContent">
-                <h6><em>Tip ToTal:</em> 0.00</h6>
-                <h6><em>Meal Count:</em> 0</h6>
+                <h6 ng-init="data.tipTotal = 0"><em>Tip ToTal:</em> {{data.tipTotal | currency}}</h6>
+                <h6 ng-init="data.mealTotal = 0"><em>Meal Count:</em> {{data.mealTotal | number}}</h6>
                 <hr class="tip">
-                <h6>Avg Tip by Meal: 0.00</h6>
+                <h6 ng-init="data.avgTip = 0">Avg Tip by Meal: {{data.avgTip | currency}}</h6>
             </md-content>
         </div>
     </div>
 </section>
 <div class="container" layout="row">
-    <md-button type="reset" flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
+    <md-button ng-click="reset()" type="reset" flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
 </div>
 
 

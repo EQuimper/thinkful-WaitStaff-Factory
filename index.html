@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wait Staff Calculator</title>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body layout="column" ng-controller="DetailsCtrl">
+<h1 flex="5" class="title">Wait Staff Calculator</h1>
+<section id="main" class="container" layout="row" flex>
+    <div flex="50" id="details" md-whiteframe="10">
+        <h2>Enter the Meal Details</h2>
+        <hr>
+        <form ng-submit="submit()" name="mealDetails">
+            <md-input-container class="marTop">
+                <label>Base Meal Price: $</label>
+                <input type="number" ng-model="baseMeal">
+            </md-input-container>
+            <br>
+            <md-input-container class="marTop">
+                <label>Tax Rate: %</label>
+                <input type="number" ng-model="taxRate">
+            </md-input-container>
+            <br>
+            <md-input-container class="marTop">
+                <label>Tip Percentage: %</label>
+                <input type="number" ng-model="tipPerc">
+            </md-input-container>
+            <br>
+            <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+            <md-button type="reset" class="md-raised md-warn">Cancel</md-button>
+        </form>
+    </div>
+    <div class="container" layout="column" flex="40" flex-offset="10">
+        <div id="custCharges" flex="50" md-whiteframe="10">
+            <h5>Customer Charges</h5>
+            <hr>
+            <md-content class="custChargesContent">
+                <h6><em>SubToTal:</em> {{getSubTotal(baseMeal, taxRate) | currency}}</h6>
+                <h6><em>Tip:</em> {{getTip(baseMeal, tipPerc) | currency}}</h6>
+                <hr class="tip">
+                <h6>Total: {{getTotal(getSubTotal(baseMeal, taxRate), getTip(baseMeal, tipPerc)) | currency}}</h6>
+            </md-content>
+        </div>
+        <br>
+        <div id="earnings" flex="50" md-whiteframe="10">
+            <h5>My Earnings Info</h5>
+            <hr>
+            <md-content class="earningsContent">
+                <h6><em>Tip ToTal:</em> 0.00</h6>
+                <h6><em>Meal Count:</em> 0</h6>
+                <hr class="tip">
+                <h6>Avg Tip by Meal: 0.00</h6>
+            </md-content>
+        </div>
+    </div>
+</section>
+<div class="container" layout="row">
+    <md-button type="reset" flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
+</div>
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

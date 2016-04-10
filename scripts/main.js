@@ -1,23 +1,100 @@
 'use strict';
 var myApp = angular.module('myApp', ['ngMaterial']);
 
-myApp.controller('DetailsCtrl', function ($scope) {
-    var count = 0;
+myApp.controller('DetailsCtrl', ['$scope', 'customerFactory', function ($scope, customerFactory) {
+	var count = 0;
 
-    $scope.submit = function () {
-        count++;
+	$scope.data = customerFactory;
 
-        $scope.data.subTotal = $scope.data.baseMeal * (1 + $scope.data.taxRate / 100);
-        $scope.data.tipCalc = $scope.data.subTotal * ($scope.data.tipPerc / 100);
-        $scope.data.totalCalc = $scope.data.subTotal + $scope.data.tipCalc;
+	$scope.submit = function() {
+		$scope.data.calcAll();
+	};
 
-        $scope.data.tipTotal += $scope.data.tipCalc;
-        $scope.data.mealTotal = count;
-        $scope.data.avgTip = $scope.data.tipTotal / $scope.data.mealTotal;
-    }
+	$scope.reset = function () {
+		$scope.data.resetAll();
+	};
+}]);
 
-    $scope.reset = function () {
-        $scope.data = 0;
-        count = 0;
-    }
+
+
+myApp.factory('customerFactory', function () {
+	var self = this;
+	self.count = 0;
+	self.baseMeal = '';
+	self.taxRate = '';
+	self.tipPerc = '';
+	self.subTotal = 0;
+	self.tipCalc = 0;
+	self.totalCalc = 0;
+	self.tipTotal = 0;
+	self.mealTotal = 0;
+	self.avgTip = 0;
+
+	function subTotal() {
+		self.subTotal = self.baseMeal * (1 + self.taxRate / 100);
+		return self.subTotal;
+	}
+
+
+	function tipCalc() {
+		self.tipCalc = self.subTotal * (self.tipPerc / 100);
+		return self.tipCalc;
+	}
+
+	function totalCalc () {
+		self.totalCalc = self.subTotal + self.tipCalc;
+		return self.totalCalc;
+	}
+
+	function tipTotal() {
+		self.tipTotal += self.tipCalc;
+		return self.tipTotal;
+	}
+
+	function mealTotal() {
+		self.mealTotal = self.count;
+		return self.mealTotal;
+	}
+
+	function avgTip() {
+		self.avgTip = self.tipTotal / self.mealTotal;
+		return self.avgTip;
+	}
+
+	function customerCharges() {
+		subTotal();
+		tipCalc();
+		totalCalc();
+	}
+
+	function myEarnings() {
+		tipTotal();
+		mealTotal();
+		avgTip();
+	}
+
+	function calcAll() {
+		self.count++;
+		customerCharges();
+		myEarnings();
+	}
+
+	self.calcAll = calcAll;
+
+
+	function resetAll() {
+		self.count = 0;
+		self.baseMeal = '';
+		self.taxRate = '';
+		self.tipPerc = '';
+		self.subTotal = 0;
+		self.tipCalc = 0;
+		self.totalCalc = 0;
+		self.tipTotal = 0;
+		self.mealTotal = 0;
+		self.avgTip = 0;
+	}
+	self.resetAll = resetAll;
+
+	return self;
 });

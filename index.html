@@ -1,68 +1,68 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wait Staff Calculator</title>
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wait Staff Calculator</title>
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body layout="column" layout-xs="column" ng-controller="DetailsCtrl">
 <h1 flex="5" class="title">Wait Staff Calculator</h1>
 <section id="main" class="container" layout="row" layout-xs="column" flex flex-order-xs="1">
-    <div flex="50" id="details" md-whiteframe="10">
-        <h2>Enter the Meal Details</h2>
-        <hr>
-        <form ng-submit="submit()" name="mealDetails">
-            <md-input-container class="marTop">
-                <label>Base Meal Price: $</label>
-                <input type="number" ng-model="data.baseMeal" required>
-            </md-input-container>
-            <br>
-            <md-input-container class="marTop">
-                <label>Tax Rate: %</label>
-                <input type="number" ng-model="data.taxRate" min='0' max='100' step="any" required>
-            </md-input-container>
-            <br>
-            <md-input-container class="marTop">
-                <label>Tip Percentage: %</label>
-                <input type="number" ng-model="data.tipPerc" step="any" min='0' max='100' required>
-            </md-input-container>
-            <br>
-            <md-button ng-disabled="mealDetails.$invalid" type="submit" class="md-raised md-primary">Submit</md-button>
-            <md-button type="reset" class="md-raised md-warn">Cancel</md-button>
-        </form>
-    </div>
-    <!--Right Container-->
-    <div class="container" layout="column" flex="40" flex-offset="10" flex-order-xs="2">
-        <!--Customer Charges-->
-        <div id="custCharges" flex="50" md-whiteframe="10" flex-order-xs="3">
-            <h5>Customer Charges</h5>
-            <hr>
-            <md-content class="custChargesContent">
-                <h6 ng-init="data.subTotal = 0"><em>SubToTal:</em> {{ data.subTotal | currency }}</h6>
-                <h6 ng-init="data.tipCalc = 0"><em>Tip:</em> {{ data.tipCalc | currency }}</h6>
-                <hr class="tip">
-                <h6 ng-init="data.totalCalc = 0">Total: {{ data.totalCalc | currency}}</h6>
-            </md-content>
-        </div>
-        <br>
-        <!--Earnings Info-->
-        <div id="earnings" flex="50" md-whiteframe="10" flex-order-xs="4">
-            <h5>My Earnings Info</h5>
-            <hr>
-            <md-content class="earningsContent">
-                <h6 ng-init="data.tipTotal = 0"><em>Tip ToTal:</em> {{data.tipTotal | currency}}</h6>
-                <h6 ng-init="data.mealTotal = 0"><em>Meal Count:</em> {{data.mealTotal | number}}</h6>
-                <hr class="tip">
-                <h6 ng-init="data.avgTip = 0">Avg Tip by Meal: {{data.avgTip | currency}}</h6>
-            </md-content>
-        </div>
-    </div>
+	<div flex="50" id="details" md-whiteframe="10">
+		<h2>Enter the Meal Details</h2>
+		<hr>
+		<form ng-submit="submit()" name="mealDetails">
+			<md-input-container class="marTop">
+				<label>Base Meal Price: $</label>
+				<input type="number" ng-model="data.baseMeal" required>
+			</md-input-container>
+			<br>
+			<md-input-container class="marTop">
+				<label>Tax Rate: %</label>
+				<input type="number" ng-model="data.taxRate" min='0' max='100' step="any" required>
+			</md-input-container>
+			<br>
+			<md-input-container class="marTop">
+				<label>Tip Percentage: %</label>
+				<input type="number" ng-model="data.tipPerc" step="any" min='0' max='100' required>
+			</md-input-container>
+			<br>
+			<md-button ng-disabled="mealDetails.$invalid" type="submit" class="md-raised md-primary">Submit</md-button>
+			<md-button type="reset" class="md-raised md-warn">Cancel</md-button>
+		</form>
+	</div>
+	<!--Right Container-->
+	<div class="container" layout="column" flex="40" flex-offset="10" flex-order-xs="2">
+		<!--Customer Charges-->
+		<div id="custCharges" flex="50" md-whiteframe="10" flex-order-xs="3">
+			<h5>Customer Charges</h5>
+			<hr>
+			<md-content class="custChargesContent">
+				<h6 ng-init="data.subTotal = 0"><em>SubToTal:</em> {{ data.subTotal | currency }}</h6>
+				<h6 ng-init="data.tipCalc = 0"><em>Tip:</em> {{ data.tipCalc | currency }}</h6>
+				<hr class="tip">
+				<h6 ng-init="data.totalCalc = 0">Total: {{ data.totalCalc | currency}}</h6>
+			</md-content>
+		</div>
+		<br>
+		<!--Earnings Info-->
+		<div id="earnings" flex="50" md-whiteframe="10" flex-order-xs="4">
+			<h5>My Earnings Info</h5>
+			<hr>
+			<md-content class="earningsContent">
+				<h6 ng-init="data.tipTotal = 0"><em>Tip ToTal:</em> {{data.tipTotal | currency}}</h6>
+				<h6 ng-init="data.mealTotal = 0"><em>Meal Count:</em> {{data.mealTotal | number}}</h6>
+				<hr class="tip">
+				<h6 ng-init="data.avgTip = 0">Avg Tip by Meal: {{data.avgTip | currency}}</h6>
+			</md-content>
+		</div>
+	</div>
 </section>
 <div class="container" layout="row" layout-xs="column" flex-order-xs="5">
-    <md-button ng-click="reset()" type="reset"  flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
+	<md-button ng-click="reset()" type="reset" flex-offset="90" class="resetAll md-raised md-warn">Reset</md-button>
 </div>
 
 

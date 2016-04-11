@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="dd558639-7f18-4edc-88ea-b3dea0ec46d5" name="Default" comment="Add all function now full working">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -8,6 +9,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main.js" afterPath="$PROJECT_DIR$/scripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/main.css.map" afterPath="$PROJECT_DIR$/styles/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/main.scss" afterPath="$PROJECT_DIR$/styles/main.scss" />
+=======
+    <list default="true" id="dd558639-7f18-4edc-88ea-b3dea0ec46d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="WaitStaff.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -255,6 +260,12 @@
       <workItem from="1460166424446" duration="17000" />
       <workItem from="1460166462676" duration="66000" />
       <workItem from="1460167384119" duration="184000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1460349886116" duration="1341000" />
+      <workItem from="1460360715565" duration="3880000" />
+      <workItem from="1460397087078" duration="954000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Add all function now full working">
       <created>1460141060322</created>
@@ -263,11 +274,22 @@
       <option name="project" value="LOCAL" />
       <updated>1460141060322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create all the route">
+      <created>1460398485017</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1460398485017</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="12787000" />
+=======
+    <option name="totallyTimeSpent" value="18962000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,8 +309,13 @@
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827103" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -315,7 +342,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add all function now full working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add all function now full working" />
+    <MESSAGE value="Create all the route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create all the route" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,6 +360,33 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -376,20 +431,96 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="180">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+=======
+        <state relative-caret-position="207">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="0" column="217" selection-start-line="0" selection-start-column="217" selection-end-line="0" selection-end-column="217" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-route/angular-route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="736" column="24" selection-start-line="736" selection-start-column="24" selection-end-line="736" selection-end-column="24" />
+          <folding>
+            <marker date="1460353314000" expanded="true" signature="12936:13683" placeholder="..." />
+            <marker date="1460353314000" expanded="true" signature="14223:14376" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="14458:14567" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="14652:14764" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="14836:15594" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="14903:15300" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
+            <marker date="1460353314000" expanded="true" signature="15015:15285" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="15114:15268" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="15352:15459" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
+            <marker date="1460353314000" expanded="true" signature="15752:16339" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="29853:30567" placeholder="..." />
+            <marker date="1460353314000" expanded="true" signature="30178:30248" placeholder="..." />
+            <marker date="1460353314000" expanded="true" signature="30626:30731" placeholder="..." />
+            <marker date="1460353314000" expanded="true" signature="30793:30955" placeholder="..." />
+            <marker date="1460353314000" expanded="true" signature="31039:31225" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31249:31284" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31341:31639" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31672:31704" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31752:31781" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31829:31862" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="31992:32575" placeholder="[...]" />
+            <marker date="1460353314000" expanded="true" signature="32088:32574" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="32158:32302" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
+            <marker date="1460353314000" expanded="true" signature="32357:32510" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
+            <marker date="1460353314000" expanded="true" signature="32611:32845" placeholder="[...]" />
+            <marker date="1460353314000" expanded="true" signature="32705:32844" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="32881:33011" placeholder="[...]" />
+            <marker date="1460353314000" expanded="true" signature="32921:33010" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="33050:33183" placeholder="[...]" />
+            <marker date="1460353314000" expanded="true" signature="33090:33182" placeholder="{...}" />
+            <marker date="1460353314000" expanded="true" signature="33320:33853" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myEarning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+>>>>>>> Stashed changes
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1350">
           <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+=======
+        <state relative-caret-position="509">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 'use strict';
 var myApp = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
+
 myApp.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: 'home.html'
@@ -45,8 +46,11 @@ myApp.controller('EarningCtrl', ['$scope', 'customerFactory', function ($scope, 
 
 
 myApp.factory('customerFactory', function () {
+	
+	var self = {};
+	
+	self = this;
 
-	var self = this;
 	self.count = 0;
 	self.baseMeal = '';
 	self.taxRate = '';

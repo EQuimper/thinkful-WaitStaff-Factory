@@ -3,8 +3,7 @@ var myApp = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when('/', {
-		templateUrl: 'home.html',
-		controller: 'HomeCtrl'
+		templateUrl: 'home.html'
 	}).when('/New Meal', {
 		templateUrl: 'newMeal.html',
 		controller: 'DetailsCtrl'
@@ -25,12 +24,19 @@ myApp.controller('DetailsCtrl', ['$scope', 'customerFactory', function ($scope, 
 		$scope.data.calcAll();
 	};
 
+	$scope.reset = function () {
+		$scope.data.resetAll();
+	};
 }]);
 
 myApp.controller('EarningCtrl', ['$scope', 'customerFactory', function ($scope, customerFactory) {
 	var count = 0;
+
 	$scope.data = customerFactory;
-	console.log($scope.data);
+
+	$scope.submit = function () {
+		$scope.data.calcAll();
+	};
 
 	$scope.reset = function () {
 		$scope.data.resetAll();
@@ -39,6 +45,7 @@ myApp.controller('EarningCtrl', ['$scope', 'customerFactory', function ($scope, 
 
 
 myApp.factory('customerFactory', function () {
+
 	var self = this;
 	self.count = 0;
 	self.baseMeal = '';

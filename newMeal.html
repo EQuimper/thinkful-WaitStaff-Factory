@@ -1,0 +1,35 @@
+<div flex="50" id="details" md-whiteframe="10">
+	<h2>Enter the Meal Details</h2>
+	<hr>
+	<form ng-submit="submit()" name="mealDetails">
+		<md-input-container class="marTop">
+			<label>Base Meal Price: $</label>
+			<input type="number" ng-model="data.baseMeal" required>
+		</md-input-container>
+		<br>
+		<md-input-container class="marTop">
+			<label>Tax Rate: %</label>
+			<input type="number" ng-model="data.taxRate" min='0' max='100' step="any" required>
+		</md-input-container>
+		<br>
+		<md-input-container class="marTop">
+			<label>Tip Percentage: %</label>
+			<input type="number" ng-model="data.tipPerc" step="any" min='0' max='100' required>
+		</md-input-container>
+		<br>
+		<md-button ng-disabled="mealDetails.$invalid" type="submit" class="md-raised md-primary">Submit</md-button>
+		<md-button type="reset" class="md-raised md-warn">Cancel</md-button>
+	</form>
+</div>
+<div class="container" layout="column" flex="40" flex-offset="10" flex-order-xs="2">
+	<div id="custCharges" flex="50" md-whiteframe="10" flex-order-xs="3">
+		<h5>Customer Charges</h5>
+		<hr>
+		<md-content class="custChargesContent">
+			<h6 ng-init="data.subTotal = 0"><em>SubToTal:</em> {{ data.subTotal | currency }}</h6>
+			<h6 ng-init="data.tipCalc = 0"><em>Tip:</em> {{ data.tipCalc | currency }}</h6>
+			<hr class="tip">
+			<h6 ng-init="data.totalCalc = 0">Total: {{ data.totalCalc | currency}}</h6>
+		</md-content>
+	</div>
+</div>

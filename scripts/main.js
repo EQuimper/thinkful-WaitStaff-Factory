@@ -1,20 +1,41 @@
 'use strict';
-var myApp = angular.module('myApp', ['ngMaterial']);
+var myApp = angular.module('myApp', ['ngMaterial', 'ngRoute']);
+
+myApp.config(['$routeProvider', function ($routeProvider) {
+	$routeProvider.when('/', {
+		templateUrl: 'home.html',
+		controller: 'HomeCtrl'
+	}).when('/New Meal', {
+		templateUrl: 'newMeal.html',
+		controller: 'DetailsCtrl'
+	}).when('/My Earning', {
+		templateUrl: 'myEarning.html',
+		controller: 'EarningCtrl'
+	}).when('/error', {
+		template: '<p>Error - Page not found</p>'
+	}).otherwise('/error');
+}]);
 
 myApp.controller('DetailsCtrl', ['$scope', 'customerFactory', function ($scope, customerFactory) {
 	var count = 0;
 
 	$scope.data = customerFactory;
 
-	$scope.submit = function() {
+	$scope.submit = function () {
 		$scope.data.calcAll();
 	};
+
+}]);
+
+myApp.controller('EarningCtrl', ['$scope', 'customerFactory', function ($scope, customerFactory) {
+	var count = 0;
+	$scope.data = customerFactory;
+	console.log($scope.data);
 
 	$scope.reset = function () {
 		$scope.data.resetAll();
 	};
 }]);
-
 
 
 myApp.factory('customerFactory', function () {
@@ -41,7 +62,7 @@ myApp.factory('customerFactory', function () {
 		return self.tipCalc;
 	}
 
-	function totalCalc () {
+	function totalCalc() {
 		self.totalCalc = self.subTotal + self.tipCalc;
 		return self.totalCalc;
 	}
@@ -94,6 +115,7 @@ myApp.factory('customerFactory', function () {
 		self.mealTotal = 0;
 		self.avgTip = 0;
 	}
+
 	self.resetAll = resetAll;
 
 	return self;

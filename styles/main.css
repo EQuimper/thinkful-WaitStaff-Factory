@@ -17,8 +17,7 @@ body {
   right: 0;
   top: 20%;
   z-index: 1000;
-  background: no-repeat center center;
-  background-image: url("/images/loading-animation.gif"); }
+  background: no-repeat center center; }
 
 .animate-view-container {
   position: relative;

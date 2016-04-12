@@ -8,12 +8,15 @@
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
-<body layout="column" layout-xs="column">
-<h1 flex="5" class="title">Wait Staff Calculator</h1>
+<body layout="column" layout-xs="column" ng-class="{loading: isLoading}">
+<div class="animate-view-container">
+	<h1 flex="5" class="title">Wait Staff Calculator</h1>
 	<a ng-href="#/">Home</a>
 	<a ng-href="#/New Meal">New Meal</a>
 	<a ng-href="#/My Earning">My Earning</a>
-<section ng-view id="main" class="container" layout="row" layout-xs="column" flex flex-order-xs="1"></section>
+	<section ng-view id="main" class="container animate-view" layout="row" layout-xs="column" flex flex-order-xs="1"></section>
+</div>
+
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>

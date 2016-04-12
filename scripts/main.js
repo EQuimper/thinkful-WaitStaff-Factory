@@ -46,9 +46,9 @@ myApp.controller('EarningCtrl', ['$scope', 'customerFactory', function ($scope, 
 
 
 myApp.factory('customerFactory', function () {
-	
+
 	var self = {};
-	
+
 	self = this;
 
 	self.count = 0;
@@ -104,6 +104,8 @@ myApp.factory('customerFactory', function () {
 		mealTotal();
 		avgTip();
 	}
+
+	
 
 	function calcAll() {
 		self.count++;

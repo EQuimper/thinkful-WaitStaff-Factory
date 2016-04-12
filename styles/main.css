@@ -1,7 +1,46 @@
 body {
   background: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333; }
+  color: #333;
+  position: relative;
+  height: 100%; }
+
+.loading {
+  position: relative;
+  height: 100%; }
+
+.loading:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 20%;
+  z-index: 1000;
+  background: no-repeat center center;
+  background-image: url("/images/loading-animation.gif"); }
+
+.animate-view-container {
+  position: relative;
+  min-height: 100%; }
+
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+  transition: 1s linear all;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.animate-view.ng-enter {
+  opacity: 1; }
+
+.animate-view.ng-leave {
+  opacity: 1;
+  z-index: 99; }
+
+.animate-view.ng-leave.ng-leave-active {
+  opacity: 0; }
 
 #main {
   width: 60%;
